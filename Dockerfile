@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 ### Build tools ###
 COPY install-packages.sh .
-RUN ./install-packages.sh
+RUN chmod +x ./install-packages.sh && ./install-packages.sh
 
 # libnice build
 COPY install-libnice.sh .
