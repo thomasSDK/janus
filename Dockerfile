@@ -6,22 +6,22 @@ RUN chmod +x ./install-packages.sh && ./install-packages.sh
 
 # libnice build
 COPY install-libnice.sh .
-RUN ./install-libnice.sh
+RUN chmod +x  ./install-libnice.sh && ./install-libnice.sh
 
 # srtp build
 COPY install-libsrtp.sh .
-RUN ./install-libsrtp.sh
+RUN chmod +x ./install-libsrtp.sh && ./install-libsrtp.sh
 
 # Datachannel build
 COPY install-usrsctp.sh .
-RUN ./install-usrsctp.sh
+RUN chmod +x ./install-usrsctp.sh && ./install-usrsctp.sh
 
 COPY install-websockets.sh .
-RUN ./install-websockets.sh
+RUN chmod +x ./install-websockets.sh && ./install-websockets.sh
 
 # Clone and install janus-gateway
 COPY install-janus.sh .
-RUN ./install-janus.sh
+RUN chmod +x ./install-janus.sh && ./install-janus.sh
 
 ### Cleaning ###
 RUN apt-get clean && apt-get autoclean && apt-get autoremove
