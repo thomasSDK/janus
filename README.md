@@ -1,6 +1,8 @@
 # Janus-webrtc-server-container
 A generic Janus WebRTC Media Server Docker container based on [agonza1](https://github.com/agonza1/Janus-webrtc-server-container)'s work.
 
+An image of the server is available on [docker hub](https://hub.docker.com/r/tsdkelly/janus).
+
 ## Build the image 
 
 `docker build -t janus-server .`
